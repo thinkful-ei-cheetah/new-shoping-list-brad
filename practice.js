@@ -2,13 +2,28 @@ import $ from '$';
 /* eslint-disable strict */
 /* eslint-disable indent */
 /* eslint-disable no-unused-vars */
+
+function generateShoppingItemsString(shoppingList) {
+  console.log("Generating shopping list element");
+
+  return `
+    <li>apples</li>
+    <li>oranges</li>
+    <li>milk</li>
+    <li>bread</li>
+  `;
+}
+
 function renderShoppingList() {
     // this function will be responsible for rendering the shopping list in
     // the DOM
+    const shoppingListItemsString = '<li>apples</li>';
+
+    // insert that HTML into the DOM
+    $('.js-shopping-list').html(shoppingListItemsString);
     console.log('`renderShoppingList` ran');
   }
-  
-  
+
   function handleNewItemSubmit() {
     // this function will be responsible for when users add a new shopping list item
     console.log('`handleNewItemSubmit` ran');
@@ -47,3 +62,6 @@ const STORE = [
     {name: "milk", checked: true},
     {name: "bread", checked: false}
   ];
+
+
+

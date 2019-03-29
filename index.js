@@ -36,5 +36,13 @@ function generateShoppingItemHtml(item, itemIndex){
     // Join the array into a single string and return it
     return elements.join();
   }
+
+const SHOPPING_LIST_EL = $('.shopping-list');
+
+function renderShoppingList() {
+  const html = generateShoppingListElements(STORE);
+  SHOPPING_LIST_EL.html(html);  
+}
+
   
   console.log(generateShoppingListElements(STORE));
